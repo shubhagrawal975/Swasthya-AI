@@ -29,7 +29,7 @@ KNOWLEDGE BASE:
 FORMAT: Use simple bullet points. Bold key terms. Use emojis sparingly for readability.
 ALWAYS end with: "📞 For free teleconsultation, book a doctor in the Consult section."`;
 
-
+// TODO: improve prompt structure for better AI responses (current output inconsistent)
 // processes user input and interacts with AI service to generate output
 exports.sendAIMessage = async (req, res, next) => {
   try {
