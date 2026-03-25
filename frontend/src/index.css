@@ -1,0 +1,212 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;0,900;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ─── CSS Custom Properties ─────────────────────────────────── */
+:root {
+  --forest:   #1a5c3a;
+  --forest2:  #246b47;
+  --mint:     #3db87a;
+  --aqua:     #00b4a0;
+  --navy:     #0d1e35;
+  --navy2:    #142943;
+  --sky:      #1e78d4;
+  --gold:     #f5a623;
+  --gold2:    #e8930d;
+  --red:      #e53e3e;
+  --cream:    #f4f7f2;
+  --text:     #1a2e1f;
+  --muted:    #5a7065;
+  --border:   #dde8e1;
+}
+
+/* ─── Base ──────────────────────────────────────────────────── */
+@layer base {
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+    background: var(--cream);
+    color: var(--text);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  h1, h2, h3, .font-serif {
+    font-family: 'Playfair Display', Georgia, serif;
+    line-height: 1.2;
+  }
+
+  a { color: inherit; text-decoration: none; }
+  img { max-width: 100%; display: block; }
+  button { cursor: pointer; font-family: inherit; }
+  input, textarea, select { font-family: inherit; }
+
+  ::-webkit-scrollbar { width: 4px; height: 4px; }
+  ::-webkit-scrollbar-track { background: transparent; }
+  ::-webkit-scrollbar-thumb { background: #c8d8cc; border-radius: 4px; }
+  ::-webkit-scrollbar-thumb:hover { background: var(--muted); }
+}
+
+/* ─── Components ────────────────────────────────────────────── */
+@layer components {
+  /* Buttons */
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 font-bold rounded-full px-6 py-3 text-sm
+           border-none cursor-pointer transition-all duration-200 active:scale-95 select-none;
+    background: var(--forest);
+    color: white;
+  }
+  .btn-primary:hover { background: var(--forest2); box-shadow: 0 6px 20px rgba(26,92,58,.28); }
+  .btn-primary:disabled { opacity: .5; cursor: not-allowed; }
+
+  .btn-gold {
+    @apply inline-flex items-center justify-center gap-2 font-extrabold rounded-full px-6 py-3 text-sm
+           border-none cursor-pointer transition-all duration-200 active:scale-95 select-none;
+    background: var(--gold);
+    color: var(--navy);
+  }
+  .btn-gold:hover { background: var(--gold2); box-shadow: 0 6px 20px rgba(245,166,35,.32); }
+
+  .btn-outline {
+    @apply inline-flex items-center justify-center gap-2 font-bold rounded-full px-5 py-2.5 text-sm
+           cursor-pointer transition-all duration-200 active:scale-95 select-none;
+    background: transparent;
+    border: 2px solid var(--forest);
+    color: var(--forest);
+  }
+  .btn-outline:hover { background: var(--forest); color: white; }
+
+  .btn-ghost {
+    @apply inline-flex items-center justify-center gap-2 font-bold rounded-full px-5 py-2.5 text-sm
+           cursor-pointer transition-all duration-200 active:scale-95 select-none;
+    background: rgba(255,255,255,.1);
+    border: 1px solid rgba(255,255,255,.25);
+    color: white;
+  }
+  .btn-ghost:hover { background: rgba(255,255,255,.22); }
+
+  /* Form inputs */
+  .input-field {
+    @apply w-full rounded-xl px-3.5 py-2.5 text-sm outline-none transition-colors duration-200;
+    border: 1.5px solid var(--border);
+    background: white;
+    color: var(--text);
+    font-family: 'Plus Jakarta Sans', sans-serif;
+  }
+  .input-field:focus { border-color: var(--forest); }
+  .input-field::placeholder { color: #a0b0a5; }
+
+  /* Cards */
+  .card {
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 4px 24px rgba(26,92,58,.09);
+    border: 1px solid var(--border);
+  }
+
+  /* Tags */
+  .tag-green  { @apply inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-xs font-bold bg-emerald-50 text-emerald-700; }
+  .tag-gold   { @apply inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-xs font-bold bg-amber-50 text-amber-700; }
+  .tag-red    { @apply inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-xs font-bold bg-red-50 text-red-700; }
+  .tag-blue   { @apply inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-xs font-bold bg-blue-50 text-blue-700; }
+  .tag-gray   { @apply inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-xs font-bold bg-gray-100 text-gray-600; }
+  .tag-purple { @apply inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-xs font-bold bg-purple-50 text-purple-700; }
+  .who-badge  { @apply inline-flex items-center gap-1 bg-blue-50 text-blue-700 text-xs font-bold px-2 py-0.5 rounded-full; }
+}
+
+/* ─── Animations ────────────────────────────────────────────── */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(16px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+@keyframes slideUp {
+  from { transform: translateY(100%); }
+  to   { transform: translateY(0); }
+}
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50%       { transform: translateY(-8px); }
+}
+@keyframes pulse-dot {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0.3; }
+}
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+@keyframes shimmer {
+  0%   { background-position: -200% 0; }
+  100% { background-position:  200% 0; }
+}
+
+.anim-fade-up  { animation: fadeUp 0.42s ease both; }
+.anim-fade-in  { animation: fadeIn 0.3s ease both; }
+.anim-slide-up { animation: slideUp 0.3s ease both; }
+.anim-float    { animation: float 3s ease-in-out infinite; }
+.pulse-dot     { animation: pulse-dot 2s infinite; }
+.spinner       { animation: spin 0.7s linear infinite; }
+
+/* ─── Utility overrides ─────────────────────────────────────── */
+.backdrop-blur-xs { backdrop-filter: blur(4px); }
+.no-scrollbar { scrollbar-width: none; }
+.no-scrollbar::-webkit-scrollbar { display: none; }
+
+/* ─── OTP Input boxes ───────────────────────────────────────── */
+.otp-input {
+  width: 48px;
+  height: 56px;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 700;
+  border: 1.5px solid var(--border);
+  border-radius: 12px;
+  outline: none;
+  transition: border-color .18s;
+  background: white;
+  color: var(--text);
+}
+.otp-input:focus { border-color: var(--forest); }
+.otp-input.filled { border-color: var(--forest); background: #f0f9f4; }
+
+/* ─── Doctor sidebar nav ────────────────────────────────────── */
+.doc-nav-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 9px 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  margin: 1px 6px;
+  color: rgba(255,255,255,.48);
+  font-size: .79rem;
+  font-weight: 600;
+  border: none;
+  background: none;
+  width: calc(100% - 12px);
+  text-align: left;
+  transition: all .15s;
+  border-left: 3px solid transparent;
+}
+.doc-nav-item:hover  { background: rgba(255,255,255,.07); color: rgba(255,255,255,.82); }
+.doc-nav-item.active { background: linear-gradient(90deg,rgba(30,120,212,.28),rgba(30,120,212,.1)); color: #fff; border-left-color: var(--sky); padding-left: 7px; }
+
+/* ─── Modal sheet ───────────────────────────────────────────── */
+.modal-sheet {
+  background: white;
+  border-radius: 22px 22px 0 0;
+  width: 100%;
+  max-width: 540px;
+  max-height: 90vh;
+  overflow-y: auto;
+  animation: slideUp .3s ease;
+}
