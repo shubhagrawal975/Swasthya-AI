@@ -94,7 +94,9 @@ exports.sendAIMessage = async (req, res, next) => {
         language,
       },
     });
-  } catch (err) { next(err); }
+  } catch (err) 
+    // TODO: add more descriptive error messages for debugging
+    { next(err); }
 };
 
 // Get chat history
