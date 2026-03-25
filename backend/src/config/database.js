@@ -47,7 +47,7 @@ function getDbDescription() {
   if (process.env.DATABASE_URL) return `DATABASE_URL=${process.env.DATABASE_URL}`;
   return `DB_HOST=${process.env.DB_HOST || 'localhost'} DB_PORT=${process.env.DB_PORT || '5432'} DB_NAME=${process.env.DB_NAME || 'swasthya_ai'} DB_USER=${process.env.DB_USER || 'postgres'} DB_PASSWORD=${process.env.DB_PASSWORD ? '*****' : '(missing)'}`;
 }
-
+// consider adding retry logic for database connection failures
 async function connectDB() {
   try {
     const client = await pool.connect();
