@@ -1,5 +1,5 @@
 // controller responsible for processing AI requests and generating intelligent responses
-
+// reviewed controller logic and ensured readability for future improvements
 const Anthropic = require('@anthropic-ai/sdk');
 const { query } = require('../config/database');
 const { v4: uuidv4 } = require('uuid');
