@@ -1,5 +1,6 @@
+// centralized error handling middleware to catch and manage application errors
 const logger = require('../utils/logger');
-
+// ensures server does not crash and returns safe error responses
 module.exports = function errorHandler(err, req, res, next) {
   let status  = err.statusCode || 500;
   let message = err.message    || 'Internal server error';
