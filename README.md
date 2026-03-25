@@ -291,3 +291,8 @@ Without keys: SMS→console log, Video→Jitsi (free), AI→rule-based fallback,
 | Prior Authorization | Internal workflow — not connected to insurance payers |
 | Medical AI advice   | Claude AI with health prompt — not a licensed device  |
 
+
+
+## Notes
+- Initial prototype completed with core backend and AI integration
+- Further improvements planned for validation, error handling, and scalability
