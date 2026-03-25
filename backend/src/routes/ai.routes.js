@@ -10,6 +10,7 @@ const { aiChatLimiter } = require('../middleware/rateLimiter');
 // handling incoming client requests and forwarding to AI controller
 router.post('/chat', authenticate, authorize('patient'), aiChatLimiter, aiCtrl.sendAIMessage);
 router.get('/chat/:session_id', authenticate, aiCtrl.getChatHistory);
+// ensure request format matches frontend expectations (needs verification)
 router.post('/generate-ad', authenticate, authorize('doctor'), aiCtrl.generateAIAd);
 router.patch('/ads/:ad_id/publish', authenticate, authorize('doctor', 'admin'), aiCtrl.publishAd);
 
