@@ -8,6 +8,18 @@
 
 ---
 
+## Setup Instructions
+
+1. Install dependencies:
+   npm install
+
+2. Set up environment variables:
+   Create a .env file in the backend folder
+
+3. Run the backend:
+   npm run dev
+
+   
 ## 🚀 Quick Start (Docker Compose + Local Postgres)
 
 ### 1) Docker Compose local Postgres
