@@ -1,3 +1,5 @@
+// handles database connection setup and ensures connectivity with the application
+
 const { Pool } = require('pg');
 const logger = require('../utils/logger');
 
@@ -39,7 +41,7 @@ async function withTransaction(callback) {
     client.release();
   }
 }
-
+// initializing database connection using environment configuration
 // Connect + test
 function getDbDescription() {
   if (process.env.DATABASE_URL) return `DATABASE_URL=${process.env.DATABASE_URL}`;
