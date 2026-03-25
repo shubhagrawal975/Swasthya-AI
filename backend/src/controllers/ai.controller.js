@@ -83,6 +83,7 @@ exports.sendAIMessage = async (req, res, next) => {
       [aiMsgId, sessionId, uuidv4(), aiReply, JSON.stringify({ model: 'claude-sonnet', tokens: response.usage })]
     );
 
+    // temporary response format, may need restructuring based on frontend requirements
     res.json({
       success: true,
       data: {
