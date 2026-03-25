@@ -33,6 +33,7 @@ ALWAYS end with: "📞 For free teleconsultation, book a doctor in the Consult s
 // processes user input and interacts with AI service to generate output
 exports.sendAIMessage = async (req, res, next) => {
   try {
+    // basic validation needed here, currently assuming input is always valid
     const { message, session_id, language = 'en' } = req.body;
     const userId = req.user.id;
 
