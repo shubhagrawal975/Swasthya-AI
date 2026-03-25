@@ -1,3 +1,5 @@
+// configuring express application with middleware and route handlers
+
 const express = require('express');
 const helmet = require('helmet');
 const cors = require('cors');
@@ -19,6 +21,8 @@ app.use(cors({
   methods: ['GET','POST','PUT','PATCH','DELETE','OPTIONS'],
   allowedHeaders: ['Content-Type','Authorization','X-Language','X-Request-ID'],
 }));
+
+// setting up middleware for parsing requests and handling cross-origin access
 app.use(compression());
 app.use(express.json({ limit: '10mb' }));
 app.use(express.urlencoded({ extended: true, limit: '10mb' }));
