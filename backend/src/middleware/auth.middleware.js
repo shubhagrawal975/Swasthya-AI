@@ -1,3 +1,4 @@
+// middleware to verify user authentication and protect secured routes
 const jwt = require('jsonwebtoken');
 const { query } = require('../config/database');
 const AppError = require('../utils/AppError');
