@@ -31,6 +31,7 @@ ALWAYS end with: "📞 For free teleconsultation, book a doctor in the Consult s
 
 // TODO: improve prompt structure for better AI responses (current output inconsistent)
 // processes user input and interacts with AI service to generate output
+// refactor needed: function handling multiple responsibilities (AI call + formatting)
 exports.sendAIMessage = async (req, res, next) => {
   try {
     // basic validation needed here, currently assuming input is always valid
