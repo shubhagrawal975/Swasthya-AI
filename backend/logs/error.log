@@ -1,0 +1,75 @@
+2026-03-19 18:58:19 [[31merror[39m]: PostgreSQL connection failed:
+2026-03-19 18:58:19 [[31merror[39m]: PostgreSQL connection failed:
+2026-03-19 18:58:19 [[31merror[39m]: PostgreSQL connection failed:
+2026-03-19 18:58:24 [[31merror[39m]: PostgreSQL connection failed:
+2026-03-19 18:58:24 [[31merror[39m]: PostgreSQL connection failed:
+2026-03-19 18:58:24 [[31merror[39m]: PostgreSQL connection failed:
+2026-03-19 18:58:34 [[31merror[39m]: PostgreSQL connection failed:
+2026-03-19 19:07:13 [[31merror[39m]: PostgreSQL connection failed:
+2026-03-19 19:07:13 [[31merror[39m]: PostgreSQL connection failed:
+2026-03-19 19:07:13 [[31merror[39m]: PostgreSQL connection failed:
+2026-03-19 19:07:13 [[31merror[39m]: PostgreSQL connection failed:
+2026-03-19 19:07:16 [[31merror[39m]: PostgreSQL connection failed:
+2026-03-19 19:07:16 [[31merror[39m]: PostgreSQL connection failed:
+2026-03-19 19:07:16 [[31merror[39m]: PostgreSQL connection failed:
+2026-03-19 19:07:16 [[31merror[39m]: PostgreSQL connection failed:
+2026-03-19 19:07:18 [[31merror[39m]: PostgreSQL connection failed:
+2026-03-19 19:07:18 [[31merror[39m]: PostgreSQL connection failed:
+2026-03-19 19:07:18 [[31merror[39m]: PostgreSQL connection failed:
+2026-03-19 19:07:18 [[31merror[39m]: PostgreSQL connection failed:
+2026-03-19 19:09:35 [[31merror[39m]: PostgreSQL connection failed:
+2026-03-19 19:09:35 [[31merror[39m]: PostgreSQL connection failed:
+2026-03-19 19:09:35 [[31merror[39m]: PostgreSQL connection failed:
+2026-03-19 19:09:35 [[31merror[39m]: PostgreSQL connection failed:
+2026-03-19 19:10:07 [[31merror[39m]: PostgreSQL connection failed:
+2026-03-19 19:14:05 [[31merror[39m]: PostgreSQL connection failed:
+2026-03-19 19:14:05 [[31merror[39m]: PostgreSQL connection failed:
+2026-03-19 19:14:05 [[31merror[39m]: PostgreSQL connection failed:
+2026-03-19 19:14:05 [[31merror[39m]: PostgreSQL connection failed:
+2026-03-19 19:14:06 [[31merror[39m]: PostgreSQL connection failed:
+2026-03-19 19:14:10 [[31merror[39m]: PostgreSQL connection failed:
+2026-03-19 19:14:10 [[31merror[39m]: PostgreSQL connection failed:
+2026-03-19 19:14:10 [[31merror[39m]: PostgreSQL connection failed:
+2026-03-19 19:14:10 [[31merror[39m]: PostgreSQL connection failed:
+2026-03-19 19:14:10 [[31merror[39m]: PostgreSQL connection failed:
+2026-03-19 19:14:17 [[31merror[39m]: PostgreSQL connection failed:
+2026-03-19 19:14:17 [[31merror[39m]: PostgreSQL connection failed:
+2026-03-19 19:14:17 [[31merror[39m]: PostgreSQL connection failed:
+2026-03-19 19:14:17 [[31merror[39m]: PostgreSQL connection failed:
+2026-03-19 19:14:17 [[31merror[39m]: PostgreSQL connection failed:
+2026-03-19 19:14:21 [[31merror[39m]: PostgreSQL connection failed:
+2026-03-19 19:14:21 [[31merror[39m]: PostgreSQL connection failed:
+2026-03-19 19:14:21 [[31merror[39m]: PostgreSQL connection failed:
+2026-03-19 19:14:21 [[31merror[39m]: PostgreSQL connection failed:
+2026-03-19 19:14:21 [[31merror[39m]: PostgreSQL connection failed:
+2026-03-19 19:19:20 [[31merror[39m]: PostgreSQL connection failed:
+2026-03-19 19:19:20 [[31merror[39m]: PostgreSQL connection failed:
+2026-03-19 19:19:20 [[31merror[39m]: PostgreSQL connection failed:
+2026-03-19 19:19:20 [[31merror[39m]: PostgreSQL connection failed:
+2026-03-19 19:19:20 [[31merror[39m]: PostgreSQL connection failed:
+2026-03-19 19:19:29 [[31merror[39m]: PostgreSQL connection failed:
+2026-03-19 19:19:29 [[31merror[39m]: PostgreSQL connection failed:
+2026-03-19 19:19:29 [[31merror[39m]: PostgreSQL connection failed:
+2026-03-19 19:19:29 [[31merror[39m]: PostgreSQL connection failed:
+2026-03-19 19:19:29 [[31merror[39m]: PostgreSQL connection failed:
+2026-03-19 19:23:19 [[31merror[39m]: PostgreSQL connection failed:
+2026-03-19 19:30:04 [[31merror[39m]: PostgreSQL connection failed:
+2026-03-19 19:30:04 [[31merror[39m]: PostgreSQL connection failed:
+2026-03-19 19:30:04 [[31merror[39m]: PostgreSQL connection failed:
+2026-03-19 19:30:04 [[31merror[39m]: PostgreSQL connection failed:
+2026-03-19 19:30:05 [[31merror[39m]: PostgreSQL connection failed:
+2026-03-19 19:30:05 [[31merror[39m]: PostgreSQL connection failed:
+2026-03-20 10:46:31 [[31merror[39m]: PostgreSQL connection failed:
+2026-03-20 10:49:55 [[31merror[39m]: PostgreSQL connection failed:
+2026-03-20 10:50:20 [[31merror[39m]: PostgreSQL connection failed:
+2026-03-20 10:59:36 [[31merror[39m]: PostgreSQL connection failed:
+2026-03-20 17:37:01 [[31merror[39m]: [POST] /api/auth/login/admin — 500: column "refresh_token" of relation "admins" does not exist
+error: column "refresh_token" of relation "admins" does not exist
+    at C:\Users\DELL\OneDrive\Desktop\ET Gen AI Hackathon\SwasthyaAI\backend\node_modules\pg-pool\index.js:45:11
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async exports.loginAdmin (C:\Users\DELL\OneDrive\Desktop\ET Gen AI Hackathon\SwasthyaAI\backend\src\controllers\auth.controller.js:142:5)
+2026-03-20 17:38:09 [[31merror[39m]: [POST] /api/auth/login/admin — 500: column "refresh_token" of relation "admins" does not exist
+error: column "refresh_token" of relation "admins" does not exist
+    at C:\Users\DELL\OneDrive\Desktop\ET Gen AI Hackathon\SwasthyaAI\backend\node_modules\pg-pool\index.js:45:11
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async exports.loginAdmin (C:\Users\DELL\OneDrive\Desktop\ET Gen AI Hackathon\SwasthyaAI\backend\src\controllers\auth.controller.js:142:5)
