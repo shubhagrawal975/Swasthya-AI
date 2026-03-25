@@ -320,6 +320,12 @@ Without keys: SMS→console log, Video→Jitsi (free), AI→rule-based fallback,
 - Processes input and returns generated response
 
 
+## 💡 Motivation
+
+This project was built to explore how AI can assist in early-stage health guidance by analyzing user symptoms and generating meaningful insights.
+The goal is to make preliminary health assistance more accessible and scalable using AI.
+
+
 ## Notes
 - Initial prototype completed with core backend and AI integration
 - Further improvements planned for validation, error handling, and scalability
