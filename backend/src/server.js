@@ -1,3 +1,5 @@
+// main entry point of backend server, initializes express app and middleware
+
 require('dotenv').config();
 const http = require('http');
 const app = require('./app');
