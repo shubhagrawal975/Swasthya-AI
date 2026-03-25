@@ -1,5 +1,5 @@
 // configuring express application with middleware and route handlers
-
+// ensuring consistent structure across middleware, routes, and controllers
 const express = require('express');
 const helmet = require('helmet');
 const cors = require('cors');
