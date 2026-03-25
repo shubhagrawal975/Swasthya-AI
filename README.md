@@ -313,3 +313,9 @@ Without keys: SMS→console log, Video→Jitsi (free), AI→rule-based fallback,
 ## Notes
 - Initial prototype completed with core backend and AI integration
 - Further improvements planned for validation, error handling, and scalability
+
+
+## Final Thoughts
+
+This project demonstrates the integration of AI services within a scalable backend architecture.  
+Future scope includes improved validation, better error handling, and optimized response processing.
