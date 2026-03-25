@@ -1,7 +1,10 @@
+// controller responsible for processing AI requests and generating intelligent responses
+
 const Anthropic = require('@anthropic-ai/sdk');
 const { query } = require('../config/database');
 const { v4: uuidv4 } = require('uuid');
 
+// integrating an external AI service to analyze user input and return structured output
 const client = new Anthropic({ apiKey: process.env.ANTHROPIC_API_KEY });
 
 const SYSTEM_PROMPT = `You are SwasthyaAI's medical assistant — a caring, multilingual health guidance AI serving rural communities in India and globally.
@@ -9,7 +12,7 @@ const SYSTEM_PROMPT = `You are SwasthyaAI's medical assistant — a caring, mult
 CORE PRINCIPLES:
 1. You provide GENERAL health guidance only — never diagnose or prescribe
 2. All guidance must align with WHO guidelines and Indian medical standards
-3. Integrate Ayurvedic wisdom (from classical texts like Atharva Veda) with modern evidence-based medicine
+3. Integrate Ayurvedic wisdom (from classical texts like the Atharva Veda) with modern evidence-based medicine
 4. Always recommend consulting a certified doctor for serious conditions
 5. Respond in the same language the user writes in (Hindi, English, Marathi, Bengali, Telugu, Tamil, Gujarati, French, Arabic, Swahili)
 6. Keep responses concise, warm, and appropriate for low-literacy rural users
@@ -26,12 +29,14 @@ KNOWLEDGE BASE:
 FORMAT: Use simple bullet points. Bold key terms. Use emojis sparingly for readability.
 ALWAYS end with: "📞 For free teleconsultation, book a doctor in the Consult section."`;
 
+
+// processes user input and interacts with AI service to generate output
 exports.sendAIMessage = async (req, res, next) => {
   try {
     const { message, session_id, language = 'en' } = req.body;
     const userId = req.user.id;
 
-    // Get or create chat session
+    // Get or create a chat session
     let sessionId = session_id;
     if (!sessionId) {
       sessionId = uuidv4();
@@ -128,6 +133,7 @@ Return a JSON object with:
 
 Make it clear, simple for rural audiences, culturally appropriate, and WHO-compliant.`;
 
+    // sending user input to AI service and waiting for the generated response  
     const response = await client.messages.create({
       model: 'claude-sonnet-4-20250514',
       max_tokens: 1000,
@@ -151,6 +157,7 @@ Make it clear, simple for rural audiences, culturally appropriate, and WHO-compl
       [adId, doctorId, type.replace(' ', '_').toLowerCase(), topic, region, severity, languages || ['hi', 'en'], JSON.stringify(content)]
     );
 
+// formatting and returning AI response back to the client
     res.json({
       success: true,
       data: { ad_id: adId, content, is_live: false },
@@ -175,7 +182,7 @@ exports.publishAd = async (req, res, next) => {
        SELECT id, $1, $2, 'public_health_alert', $3 FROM users WHERE is_active=TRUE LIMIT 5000`,
       [ad.content.title_en || ad.topic, ad.content.body_en || '', JSON.stringify({ ad_id })]
     );
-
+// handling errors to prevent server crash and provide safe response
     res.json({ success: true, message: 'Advertisement published and pushed to users', data: { ad_id, is_live: true } });
   } catch (err) { next(err); }
 };
