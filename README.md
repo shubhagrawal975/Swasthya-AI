@@ -227,6 +227,16 @@ SwasthyaAI/
 ```
 
 ---
+## 🏗️ Architecture
+
+- **Backend:** Node.js (Express)
+- **AI Integration:** Anthropic API (Claude)
+- **Database:** PostgreSQL
+- **Containerization:** Docker
+
+### Flow:
+Client → API Routes → Controller → AI Service → Response → Client
+
 
 ## ✅ Features (Fully Implemented)
 
