@@ -304,6 +304,11 @@ Without keys: SMS→console log, Video→Jitsi (free), AI→rule-based fallback,
 | Medical AI advice   | Claude AI with health prompt — not a licensed device  |
 
 
+## API Overview
+
+- POST /api/ai → handles AI-based user queries
+- Processes input and returns generated response
+
 
 ## Notes
 - Initial prototype completed with core backend and AI integration
